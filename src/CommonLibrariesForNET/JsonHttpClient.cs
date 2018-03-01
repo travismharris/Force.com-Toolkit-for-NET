@@ -102,6 +102,11 @@ namespace Salesforce.Common
         }
 
         // POST
+        public async Task<CompositeResponse> HttpCompositeAsync(CompositeRequest request)
+        {
+            var url = Common.FormatUrl("composite/", InstanceUrl, ApiVersion);
+            return await HttpPostAsync<CompositeResponse>(request, url);
+        }
 
         public async Task<T> HttpPostAsync<T>(object inputObject, string urlSuffix)
         {

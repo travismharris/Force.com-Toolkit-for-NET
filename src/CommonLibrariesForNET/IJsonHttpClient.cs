@@ -20,6 +20,9 @@ namespace Salesforce.Common
         Task<T> HttpPostRestApiAsync<T>(string apiName, object inputObject);
         Task<T> HttpBinaryDataPostAsync<T>(string urlSuffix, object inputObject, byte[] fileContents, string headerName, string fileName);
 
+        //COMPOSITE
+        Task<CompositeResponse> HttpCompositeAsync(CompositeRequest request);
+
         // PATCH
         Task<SuccessResponse> HttpPatchAsync(object inputObject, string urlSuffix);
         Task<SuccessResponse> HttpPatchAsync(object inputObject, Uri uri);

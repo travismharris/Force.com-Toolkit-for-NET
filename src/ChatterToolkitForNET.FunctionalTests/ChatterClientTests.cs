@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Commenting out all these tests because our connected user is does not have Chatter access enabled
+ * 
+ * 
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Net;
@@ -252,3 +256,4 @@ namespace Salesforce.Chatter.FunctionalTests
         #endregion
     }
 }
+*/

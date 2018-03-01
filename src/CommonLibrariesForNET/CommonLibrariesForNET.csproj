@@ -50,6 +50,10 @@
     <Compile Include="Attributes\CreateableAttribute.cs" />
     <Compile Include="Extensions\HttpContentCompressedDataExtensions.cs" />
     <Compile Include="IXmlHttpClient.cs" />
+    <Compile Include="Models\Json\CompositeRequest.cs" />
+    <Compile Include="Models\Json\CompositeResponse.cs" />
+    <Compile Include="Models\Json\CompositeSubRequest.cs" />
+    <Compile Include="Models\Json\CompositeSubResponse.cs" />
     <Compile Include="Models\Json\DescribeGlobalResult.cs" />
     <Compile Include="Models\Json\DisplayTypes.cs" />
     <Compile Include="ForceAuthException.cs" />
@@ -62,6 +66,7 @@
     <Compile Include="Models\Json\Error.cs" />
     <Compile Include="Models\Json\ErrorResponse.cs" />
     <Compile Include="Models\Json\ErrorResponses.cs" />
+    <Compile Include="Models\Json\HttpHeaders.cs" />
     <Compile Include="Models\Json\QueryResult.cs" />
     <Compile Include="Models\Json\SuccessResponse.cs" />
     <Compile Include="Models\Json\UserInfo.cs" />

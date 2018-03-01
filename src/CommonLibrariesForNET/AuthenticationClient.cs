@@ -17,11 +17,26 @@ namespace Salesforce.Common
 
         private const string UserAgent = "forcedotcom-toolkit-dotnet";
         private const string TokenRequestEndpointUrl = "https://login.salesforce.com/services/oauth2/token";
+        //private const string TokenRequestEndpointUrl = "https://test.salesforce.com/services/oauth2/token";
         private readonly HttpClient _httpClient;
 
         public AuthenticationClient()
-            : this(new HttpClient())
+            : this("v36.0", new HttpClient())
         {
+        }
+
+        //use this constructor to specify apiVersion for newer operations 
+        public AuthenticationClient(string apiVersion)
+            :this(apiVersion, new HttpClient())
+        {            
+        }
+
+        public AuthenticationClient(string apiVersion, HttpClient httpClient)
+        {
+            if (httpClient == null) throw new ArgumentNullException("httpClient");
+
+            _httpClient = httpClient;
+            ApiVersion = apiVersion;
         }
 
         public AuthenticationClient(HttpClient httpClient)

@@ -64,10 +64,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ChatterToolkitForNET\ChatterToolkitForNET.csproj">
-      <Project>{011b1f31-45aa-4cd1-bb97-f4a508408365}</Project>
-      <Name>ChatterToolkitForNET</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CommonLibrariesForNET\CommonLibrariesForNET.csproj">
       <Project>{688bc3a2-29c2-48f7-bc28-7a81abf5c3d3}</Project>
       <Name>CommonLibrariesForNET</Name>

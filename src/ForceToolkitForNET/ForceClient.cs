@@ -8,6 +8,7 @@ using System.Reflection;
 using Salesforce.Common;
 using Salesforce.Common.Models.Json;
 using Salesforce.Common.Models.Xml;
+using Newtonsoft.Json;
 
 namespace Salesforce.Force
 {
@@ -144,6 +145,12 @@ namespace Salesforce.Force
             if (string.IsNullOrEmpty(objectName)) throw new ArgumentNullException("objectName");
 
             return _jsonHttpClient.HttpGetAsync<T>(string.Format("sobjects/{0}", objectName));
+        }
+
+        public Task<CompositeResponse> CompositeAsync(string jsonCompositeRequest)
+        {
+            var request = JsonConvert.DeserializeObject<CompositeRequest>(jsonCompositeRequest);
+            return _jsonHttpClient.HttpCompositeAsync(request);
         }
 
         public Task<T> DescribeAsync<T>(string objectName)

@@ -1,4 +1,8 @@
-﻿using System.Collections.Generic;
+﻿/*
+ * These functional tests are creating and updating records in Salesforce which is not desirable
+ *
+ * 
+using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Net;
@@ -134,3 +138,4 @@ namespace Salesforce.Force.FunctionalTests
     }
 
 }
+*/
